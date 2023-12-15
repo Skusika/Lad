@@ -1,0 +1,19 @@
+{% extends 'shopapp/index.html' %}
+
+{% block content %}
+
+ <h2> Список всех товаров </h2>
+    <ul>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.product_name }}</td>
+            <td>{{ product.product_description }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.date_ordered }}</td>
+            <td>{{ product.return_goods }}</td>
+
+        </tr>
+    </ul>
+        {% endfor %}
+{% endblock %}

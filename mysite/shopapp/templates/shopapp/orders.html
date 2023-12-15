@@ -1,0 +1,17 @@
+{% extends 'shopapp/index.html' %}
+
+{% block content %}
+
+ <h2> Список всех заказов </h2>
+    <ul>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.order_name }}</td>
+            <td>{{ order.order_description }}</td>
+            <td>{{ order.date_created }}</td>
+            <td>{{ order.author }}</td>
+        </tr>
+    </ul>
+        {% endfor %}
+    </ul>
+{% endblock %}
